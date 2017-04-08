@@ -65,9 +65,6 @@
     <script src="js/scripts.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLLGhjWO-W-Gzd1KmhSpAETJcEl3IBgzs&callback=initMap">
     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLLGhjWO-W-Gzd1KmhSpAETJcEl3IBgzs&callback=initMap">
-    </script>
   </head>
     <body>
       <div class="container">
@@ -82,7 +79,7 @@
           <div class="form-group">
             <label>Type of Activity Witnessed:</label>
             <br>
-            <select id="activity">
+            <select id="activity" required>
               <option value="" disabled selected>Select a Category...</option>
               <option value="assault">Physical Assault</option>
               <option value="harrassment">Harrassment</option>
@@ -106,8 +103,8 @@
             <br>
             <br>
           </div>
-        <input id="submit" type="button" value="Submit">
       </div>
     </form>
+    <input id="submit" type="submit" value="Submit">
   </body>
 </html>
