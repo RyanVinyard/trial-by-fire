@@ -14,6 +14,8 @@
   <body>
     <div class="container">
     <h1>Crime Report</h1>
+    <hr>
+  <br>
       <form>
         <div class="form-group">
           Type of Activity Witnessed:</br>
@@ -23,15 +25,16 @@
             <option value="harrassment">Harrassment</option>
             <option value="sexualHarrassment">Sexual Harrassment</option>
           </select>
-          </br>
+          <br>
+          <br>
           Location Seen:<br>
-          <input type="text" name="location" required placeholder="Enter a Location">
+          <input id="location" type="text" name="location" required placeholder="Enter a Location">
           <br>
           Time Witnessed:<br>
-          <input type="time" name="time" required>
+          <input id="time" type="time" name="time" required>
           <br>
         </div>
-        <button type="submit">Submit Tip</button>
+        <button type="submit" class="btn btn-success">Submit Tip</button>
       </form>
   </body>
 </html>

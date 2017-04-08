@@ -4,3 +4,17 @@ input {
   margin: 18px;
   font-size: 12pt;
 }
+
+#location {
+  width: 380px;
+  height: 40px;
+  margin: 10px;
+  font-size: 10pt;
+}
+
+#time {
+  width: 180px;
+  height: 40px;
+  margin: 10px;
+  font-size: 10pt;
+}
