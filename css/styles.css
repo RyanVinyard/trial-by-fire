@@ -1,27 +1,27 @@
 #address {
   width: 380px;
-  height: 40px;
+  height: 32px;
   margin: 10px;
   font-size: 10pt;
 }
 
 #time {
   width: 180px;
-  height: 40px;
+  height: 32px;
   margin: 10px;
   font-size: 10pt;
 }
 
 #activity {
   width: 180px;
-  height: 40px;
+  height: 32px;
   margin: 10px;
   font-size: 10pt;
 }
 
 #description {
   width: 400px;
-  height: 100px;
+  height: 32px;
   margin: 10px;
   font-size: 10pt;
 }

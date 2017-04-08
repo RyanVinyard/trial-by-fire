@@ -1,11 +1,20 @@
 //I understand that in good practice, jQuery does NOT belong in back end logic. I am out of practice however, and wanted to make this work however I could. If for some reason you are reading this and have suggestion for cleaning up my code, email me at rav.ryanvinyard@gmail.com
 
+var prevInfoWindow = false;
+
+
 function resetFields() {
   $("input#activity").val("");
   $("input#address").val("");
   $("input#time").val("");
   $("input#description").val("");
 }
+
+function clearInfoWindows() {
+  if (infowindow) {
+    infowindow.close();
+  }
+};
 
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -36,12 +45,19 @@ function geocodeAddress(geocoder, resultsMap) {
         position: results[0].geometry.location
       });
 
-      var contentString = "Incident Description: " + inputtedDescription;
+
+
+      var infoWindowText = "Address: " + inputtedAddress + "<br>" + "Type of Incident: " + inputtedActivity + "<br>" + "Time of Incident: " + inputtedTime + "<br>" + "Description of Incident: " + inputtedDescription;
 
     var infowindow = new google.maps.InfoWindow({
-      content: contentString
+      content: infoWindowText
     });
       marker.addListener('click', function() {
+        if( prevInfoWindow ) {
+           prevInfoWindow.close();
+        }
+
+        prevInfoWindow = infowindow;
          infowindow.open(map, marker);
        });
 
