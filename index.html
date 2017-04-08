@@ -2,7 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
     <title>Crime Report</title>
   </head>
   <body>
@@ -11,19 +17,20 @@
       <form>
         Type of Activity Witnessed:</br>
         <select>
+          <option value="" disabled selected>Select a Category...</option>
           <option value="assault">Physical Assault</option>
           <option value="harrassment">Harrassment</option>
           <option value="sexualHarrassment">Sexual Harrassment</option>
         </select>
       </br>
         Location Seen:<br>
-        <input type="text" name="location">
+        <input type="text" name="location" required placeholder="Enter a Location">
         <br>
         Time Witnessed:<br>
-        <input type="time" name="time" required placeholder="Enter a time">
+        <input type="time" name="time" required>
+        <br>
+        <button type="submit">Submit Tip</button>
       </form>
     </div>
-
-
   </body>
 </html>
