@@ -58,34 +58,56 @@
     <title>Crime Report</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+    <link rel="icon" href="https://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/022013/neighborhood-watch.png?itok=ONbLXpd_">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-  <script src="js/scripts.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLLGhjWO-W-Gzd1KmhSpAETJcEl3IBgzs&callback=initMap">
-  </script>
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLLGhjWO-W-Gzd1KmhSpAETJcEl3IBgzs&callback=initMap">
-  </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLLGhjWO-W-Gzd1KmhSpAETJcEl3IBgzs&callback=initMap">
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLLGhjWO-W-Gzd1KmhSpAETJcEl3IBgzs&callback=initMap">
+    </script>
   </head>
-  <body>
-    <div class="container">
-      <h1 id="mainHeadline">Crime Report</h1>
-      <hr>
-      <br>
-      <h3 id="mapHeadline">Witnessed Incident Map</h3>
-      <div id="map"></div>
-      <hr>
-      <br>
-      <form>
-        <div class="form-group">
-          <input id="address" type="textbox" placeholder="Enter an address...">
-          <input id="submit" type="button" value="Submit">
-        </div>
-      </form>
-    </div>
+    <body>
+      <div class="container">
+        <h1 id="mainHeadline">Crime Report</h1>
+        <hr>
+        <br>
+        <h3 id="mapHeadline">Witnessed Incident Map</h3>
+        <div id="map"></div>
+        <hr>
+        <br>
+        <form id="dataEntry">
+          <div class="form-group">
+            <label>Type of Activity Witnessed:</label>
+            <br>
+            <select id="activity">
+              <option value="" disabled selected>Select a Category...</option>
+              <option value="assault">Physical Assault</option>
+              <option value="harrassment">Harrassment</option>
+              <option value="sexualHarrassment">Sexual Harrassment</option>
+            </select>
+            <br>
+            <br>
+            <label>Address Incident Occurred:</label>
+            <br>
+            <input id="address" type="textbox" placeholder="Enter an address..." required>
+            <br>
+            <br>
+            <label>Time Incident was Witnessed:</label>
+            <br>
+            <input id="time" type="time" name="time" required>
+            <br>
+            <br>
+            <label>Description of Incident (Optional):</label>
+            <br>
+            <input id="description" type="textbox">
+            <br>
+            <br>
+          </div>
+        <input id="submit" type="button" value="Submit">
+      </div>
+    </form>
   </body>
 </html>

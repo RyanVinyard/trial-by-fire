@@ -67,6 +67,7 @@ function initMap() {
   document.getElementById('submit').addEventListener('click', function() {
     geocodeAddress(geocoder, map);
   });
+  // var userData =
 }
 
 function geocodeAddress(geocoder, resultsMap) {
@@ -83,3 +84,16 @@ function geocodeAddress(geocoder, resultsMap) {
     }
   });
 }
+
+//User Interface Logic
+
+$(document).ready(function() {
+  $("form#dataEntry").submit(function(event) {
+    event.preventDefault();
+
+    var inputtedActivity = $("input#activity").val();
+    var inputtedAddress = $("input#address").val();
+    var inputtedTime = $("input#time").val();
+    var inputtedDescription = $("input#description").val();
+  });
+});
