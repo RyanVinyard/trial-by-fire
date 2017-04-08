@@ -29,6 +29,7 @@ function initMap() {
   var geocoder = new google.maps.Geocoder();
   document.getElementById('submit').addEventListener('click', function() {
     geocodeAddress(geocoder, map);
+
   });
 }
 
@@ -47,12 +48,11 @@ function geocodeAddress(geocoder, resultsMap) {
       if (status === 'OK' && inputtedAddress != "" && inputtedActivity != "Select a Category..." && inputtedTime != "") {
         resultsMap.setCenter(results[0].geometry.location);
         resetFields();
+        alert("Thank you for submitting your tip. The Eugene Police Department is prepared to investigate these incidents. Thank you for doing your civic duty!" + "\n \n" + "If there is an emergency, remember to call 911!");
         var marker = new google.maps.Marker({
           map: resultsMap,
           position: results[0].geometry.location
         });
-
-
 
     var infoWindowText = "Address: " + inputtedAddress + "<br>" + "Type of Incident: " + inputtedActivity + "<br>" + "Time of Incident: " + inputtedTime + "<br>" + "Description of Incident: " + inputtedDescription;
 
@@ -74,7 +74,7 @@ function geocodeAddress(geocoder, resultsMap) {
       alert("Enter in standard addresses (e.g. 999 Willamette st) or location names (e.g. Eugene Public Library).");
     }
   } else if (inputtedActivity === "Select a Category..." || inputtedTime === "" || inputtedAddress === "") {
-    alert ("You must fill out all fields!");
+    alert ("You must fill out all required fields!");
   } else {
     alert("Your address appears to be blank, try again.");
   }
