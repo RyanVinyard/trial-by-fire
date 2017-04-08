@@ -18,3 +18,13 @@ input {
   margin: 10px;
   font-size: 10pt;
 }
+
+#mapHeadline {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+#mainHeadline {
+  text-align: center;
+  margin: 8px;
+}
