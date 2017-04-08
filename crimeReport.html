@@ -16,13 +16,13 @@
       <div class="container">
         <h1 id="mainHeadline">Crime Report</h1>
         <hr>
-        <br>
         <h3 id="mapHeadline">Witnessed Incident Map</h3>
         <div id="map"></div>
         <hr>
-        <br>
-        <form id="dataEntry">
+        <form id="dataEntry" action="submit.php">
           <div class="form-group">
+            <div class="row">
+              <div class="col-sm-4">
             <label>Type of Activity Witnessed:</label>
             <br>
             <select id="activity" required>
@@ -31,26 +31,31 @@
               <option value="harrassment">Harrassment</option>
               <option value="sexualHarrassment">Sexual Harrassment</option>
             </select>
-            <br>
-            <br>
+          </div>
+            <div class="col-sm-4">
             <label>Address Incident Occurred:</label>
             <br>
             <input id="address" type="textbox" placeholder="Enter an address..." required>
-            <br>
-            <br>
+          </div>
+            <div class="col-sm-4">
             <label>Time Incident was Witnessed:</label>
             <br>
             <input id="time" type="time" name="time" required>
-            <br>
-            <br>
+          </div>
+        </div>
+        <br>
+            <div id="stubbornColumn">
+              <!-- <div class="row">
+                <div class="col-sm-12"> -->
             <label>Description of Incident (Optional):</label>
             <br>
             <input id="description" type="textarea" maxlength="100">
-            <br>
-            <br>
+          <!-- </div>
+        </div> -->
           </div>
       </div>
     </form>
     <input id="submit" type="submit" value="Submit">
+  </div>
   </body>
 </html>

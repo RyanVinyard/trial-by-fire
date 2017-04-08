@@ -1,5 +1,5 @@
 #address {
-  width: 380px;
+  width: 180px;
   height: 32px;
   margin: 10px;
   font-size: 10pt;
@@ -21,9 +21,8 @@
 
 #description {
   width: 400px;
-  height: 32px;
-  margin: 10px;
   font-size: 10pt;
+  margin: auto;
 }
 
 #mapHeadline {
@@ -39,4 +38,10 @@
 #map {
   height: 400px;
   width: 100%;
+}
+
+#stubbornColumn {
+  margin: auto;
+  width: 100px;
+  text-align: center;
 }

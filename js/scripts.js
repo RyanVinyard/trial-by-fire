@@ -24,7 +24,6 @@ function initMap() {
 
 
   var geocoder = new google.maps.Geocoder();
-
   document.getElementById('submit').addEventListener('click', function() {
     geocodeAddress(geocoder, map);
   });
@@ -32,6 +31,10 @@ function initMap() {
 
 function geocodeAddress(geocoder, resultsMap) {
   var address = document.getElementById('address').value;
+  var addressSplitArray = address.split(" ");
+  if (addressSplitArray.lastIndexOf() != "Eugene" || "eugene" || "oregon" || "Oregon" || "OR" || "or" || "Or") {
+    address = address + ", Eugene, OR"
+  };
   geocoder.geocode({'address': address}, function(results, status) {
     var activity = document.getElementById("activity");
     var inputtedActivity = activity.options[activity.selectedIndex].text;
