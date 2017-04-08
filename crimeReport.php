@@ -11,6 +11,12 @@
     <script src="js/scripts.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLLGhjWO-W-Gzd1KmhSpAETJcEl3IBgzs&callback=initMap">
     </script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+      emailjs.init("user_eSuEnYqCcLzyf6g4he7KR");
+    })();
+</script>
   </head>
     <body>
       <div class="container">
