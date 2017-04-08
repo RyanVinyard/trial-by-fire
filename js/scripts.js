@@ -42,12 +42,22 @@ function geocodeAddress(geocoder, resultsMap) {
   geocoder.geocode({'address': address}, function(results, status) {
     var activity = document.getElementById("activity");
     var inputtedActivity = activity.options[activity.selectedIndex].text;
+      if (inputtedActivity === "Extremely Disturbing") {
+        inputtedActivity = inputtedActivity.toUpperCase();
+      }
     var inputtedAddress = $("input#address").val();
     var inputtedTime = $("input#time").val();
     var inputtedDescription = $("input#description").val();
       if (status === 'OK' && inputtedAddress != "" && inputtedActivity != "Select a Category..." && inputtedTime != "") {
         resultsMap.setCenter(results[0].geometry.location);
+
+        console.log("ready to send email");
+        emailjs.send("gmail", "hack4cause_template_email", {"reply_to":"", "inputtedActivity":inputtedActivity , "to_name":"rav.ryanvinyard@gmail.com","message_html":"Severity of Report: " + inputtedActivity + "<br>" + "Location of Report: " + inputtedAddress + "<br>" + "Time of Report: " + inputtedTime + "<br>" + "Additional Details: " + inputtedDescription});
+        console.log("email should be sent now...");
+
         resetFields();
+
+
         alert("Thank you for submitting your tip. The Eugene Police Department is prepared to investigate these incidents. Thank you for doing your civic duty!" + "\n \n" + "If there is an emergency, remember to call 911!");
         var marker = new google.maps.Marker({
           map: resultsMap,
