@@ -2,9 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
     <title>Crime Report</title>
   </head>
   <body>
+    <h1>Crime Report</h1>
+    <div id="report-form">
+      <form>
+        Type of Activity Witnessed:</br>
+        <select>
+          <option value="assault">Physical Assault</option>
+          <option value="harrassment">Harrassment</option>
+          <option value="sexualHarrassment">Sexual Harrassment</option>
+        </select>
+      </br>
+        Location Seen:<br>
+        <input type="text" name="location">
+        <br>
+        Time Witnessed:<br>
+        <input type="time" name="time" required placeholder="Enter a time">
+      </form>
+    </div>
+
 
   </body>
 </html>
