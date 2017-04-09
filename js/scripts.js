@@ -54,9 +54,8 @@ function geocodeAddress(geocoder, resultsMap) {
         console.log("ready to send email");
         emailjs.send("gmail", "hack4cause_template_email", {"reply_to":"", "inputtedActivity":inputtedActivity , "to_name":"rav.ryanvinyard@gmail.com","message_html":"Severity of Report: " + inputtedActivity + "<br>" + "Location of Report: " + inputtedAddress + "<br>" + "Time of Report: " + inputtedTime + "<br>" + "Additional Details: " + inputtedDescription});
         console.log("email should be sent now...");
-
+        
         resetFields();
-
 
         alert("Thank you for submitting your tip. The Eugene Police Department is prepared to investigate these incidents. Thank you for doing your civic duty!" + "\n \n" + "If there is an emergency, remember to call 911!");
         var marker = new google.maps.Marker({
