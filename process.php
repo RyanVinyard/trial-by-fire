@@ -14,9 +14,10 @@
   if($row['email'] == $email && $row['pass'] == $password && ("" !== $email || "" !== $password))
   {
 
+//this is the arrary!!
     $person = $row;
     print_r($person);
-    header("location: crimeReport.php");
+    // header("location: crimeReport.php");
   }
   else {
     echo "Failed to login.";
