@@ -19,6 +19,7 @@
         <p>
           <input type="submit" id="btn" value="Login" />
         </p>
+		<p><a href="./Registration.php"> Haven't Registered Yet?</a></p>
       </form>
     </div>
   </body>
