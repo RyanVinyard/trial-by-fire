@@ -1,3 +1,4 @@
+
 <?php
   // Get Values passed from form in login.php file
   $email = $_POST['email'];
@@ -17,7 +18,7 @@
 //this is the arrary!!
     $person = $row;
     print_r($person);
-    // header("location: crimeReport.php");
+    header("location: crimeReport.php");
   }
   else {
     echo "Failed to login.";

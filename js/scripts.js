@@ -55,7 +55,8 @@ function geocodeAddress(geocoder, resultsMap) {
         emailjs.send("gmail", "hack4cause_template_email", {"reply_to":"", "inputtedActivity":inputtedActivity , "to_name":"rav.ryanvinyard@gmail.com","message_html":"Severity of Report: " + inputtedActivity + "<br>" + "Location of Report: " + inputtedAddress + "<br>" + "Time of Report: " + inputtedTime + "<br>" + "Additional Details: " + inputtedDescription});
         console.log("email should be sent now...");
 
-// HEY YUCHIN LOOK AT THE CONSOLE LOG BELOW THIS CHECK IT OUT THAT'S SOMEWHERE WHERE YOU CAN GRAB THE VALUES OF THOS VARIABLES OOOOOOOOH
+
+        js2php(inputtedActivity, inputtedAddress, inputtedTime,inputtedDescription);
 
             console.log(inputtedActivity, inputtedAddress, inputtedTime, inputtedDescription);
 
@@ -94,6 +95,26 @@ function geocodeAddress(geocoder, resultsMap) {
   });
 }
 
+
+function js2php(inputtedActivity, inputtedAddress, inputtedTime,inputtedDescription) {
+  //Assigning the js variables to a url that can be accessed via php
+    if( typeof inputtedActivity == 'undefined' || inputtedActivity == '' ) {
+      inputtedActivity = null;
+    }
+    if( typeof inputtedAddress == 'undefined' || inputtedAddress == '' ) {
+      inputtedAddress = null;
+    }
+    if( typeof inputtedTime == 'undefined' || inputtedTime == '' ) {
+      inputtedTime = null;
+    }
+    if( typeof inputtedDescription == 'undefined' || inputtedDescription == '' ) {
+      inputtedDescription = null;
+    }
+
+    window.location.href= "jsTranslator.php?w1=" + inputtedActivity + "&w2=" + inputtedAddress + "&w3=" + inputtedTime + "&w4=" + inputtedDescription;
+    console.log("window.location.href", window.location.href);
+}
+
 //User Interface Logic, Or more appropriately document ready
 
 $(document).ready(function() {
@@ -104,7 +125,6 @@ $(document).ready(function() {
     var inputtedAddress = $("input#address").val();
     var inputtedTime = $("input#time").val();
     var inputtedDescription = $("input#description").val();
-
 
   });
 });
