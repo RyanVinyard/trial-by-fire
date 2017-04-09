@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <link rel="icon" href="https://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/022013/neighborhood-watch.png?itok=ONbLXpd_">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css?<?php echo time(); ?>" type="text/css" >
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLLGhjWO-W-Gzd1KmhSpAETJcEl3IBgzs&callback=initMap">
@@ -20,7 +20,22 @@
   </head>
     <body>
       <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="topLinkLeft">
+        <p><a href="http://coeapps.eugene-or.gov/epddispatchlog">Click here to check out the Eugene Police Department's official dispatch log!</p></a>
+      </div>
+      </div>
+      <div class="col-sm-4">
         <h1 id="mainHeadline">Crime Report</h1>
+      </div>
+      <div class="col-sm-4">
+        <div class="topLinkRight">
+        <p><a href="https://www.adl.org/education/references/hate-symbols">Click here to check out the ADL's official Hate Symbols Database!</p></a>
+      </div>
+      </div>
+    </div>
+      </div>
         <hr>
         <h3 id="mapHeadline">Witnessed Incident Map</h3>
         <div id="map"></div>

@@ -33,6 +33,7 @@
 #mainHeadline {
   text-align: center;
   margin: 8px;
+  font-size: 42px;
 }
 
 #map {
@@ -63,7 +64,16 @@ body {
   background-color: #0099ff;
 }
 
-h1 {
-  font-weight: bold;
-  font-size: 38pt;
+.topLinkLeft {
+  margin-top: 14px;
+  text-align: left;
+}
+
+.topLinkRight {
+  margin-top: 14px;
+  text-align: right;
+}
+
+p a {
+  color: white;
 }
