@@ -46,7 +46,7 @@
               <input id="time" type="time" name="time" required>
             </div>
           </div>
-          <h5>A brief, optional description can be entered below to help the process:</h5>
+          <h4>A brief, optional description can be entered below to help the process:</h4>
           <div id="stubbornColumn">
             <input id="description" type="text" maxlength="125">
           </div>
