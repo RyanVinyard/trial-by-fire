@@ -34,7 +34,7 @@ _Fran Valezquez: C.Vel95@gmail.com , Ryan Vinyard: Rav.ryanvinyard@gmail.com , Y
 
 ## Technologies Used
 
-_Git, HTML, JS, jQuery, Bootstrap, Swift, MAMP, mySQL, Postman, php_
+_Git, HTML/CSS, JS, jQuery, Bootstrap, Swift, mySQL, Postman, php, Apache_
 
 ### License
 
